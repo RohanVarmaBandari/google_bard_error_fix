@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohan Watch Company</title>
+<style>
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  float: left;
+  color: #fff;  /* Fixed logo text color contrast */
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 40px 0;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+  margin: 0 0 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+img {
+  width: 200px;
+  margin: 10px;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  background-color: #eee;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.price-list {
+
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+</style>
+<script>
+function createPriceList() {
+  const watchPrices = [
+    { name: "Classic Leather", price: 199 },
+    { name: "Sport Chronograph", price: 249 },
+    { name: "Luxury Diamond", price: 999 },
+  ];
+
+  let priceListHTML = "";
+  for (const watch of watchPrices) {
+    priceListHTML += `<div><h3><span class="math-inline">\{watch\.name\}</h3\><p\></span>${watch.price}</p></div>`;
+  }
+  document.querySelector(".price-list").innerHTML = priceListHTML;
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="#" class="logo">Rohan Watches</a>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#items">Items</a></li>
+        <li><a href="#price">Price</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="home">
+    <div class="container">
+      <h1>Welcome to Rohan Watches</h1>
+      <p>Experience the finest craftsmanship and timeless style with Rohan watches. We offer a diverse collection for every taste and occasion.</p>
+      <img src="path/to/your/watch1.jpg" alt="Watch Image"> <img src="path/to/yourself/watch2.jpg" alt="Watch Image"> </div>
+  </section>
+
+  <section id="items">
+    <div class="container">
+      <h2>Our Watch Collection</h2>
+      <p>Explore our range of watches, crafted with meticulous attention to detail.</p>
+      <div class="items-grid">
+        <div class="item">
+          <h3>Classic Series</h3>
+          <p>Elegant and timeless, perfect for everyday wear.</p>
